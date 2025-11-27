@@ -1,4 +1,64 @@
+# ======================================
+# MongoDB Lab Repo — Git Ignore Rules
+# ======================================
+
+# --------------------------------------
+# MongoDB local database files (critical)
+# --------------------------------------
+data/     # MongoDB container volume (DO NOT COMMIT)
+*.wt                # WiredTiger collection files
+*.ns
+*.log
+journal/
+diagnostic.data/
+
+# --------------------------------------
+# Python virtual environments
+# --------------------------------------
 .venv/
-data/
+venv/
+env/
+
+# Python cache
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+*.pkl
+
+# Packaging / build
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# --------------------------------------
+# IDE / Editor junk
+# --------------------------------------
+.vscode/
+.idea/
+*.iml
+
+# --------------------------------------
+# OS junk files
+# --------------------------------------
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.tmp
+
+# --------------------------------------
+# Docker related
+# --------------------------------------
+docker-compose.override.yml
+docker/*.pid
+*.pid
+
+# --------------------------------------
+# Environment / secrets
+# --------------------------------------
+.env
+.env.local
+.env.development
+.env.production
