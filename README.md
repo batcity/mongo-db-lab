@@ -4,12 +4,18 @@ This repo is a **MongoDB-focused learning lab**.
 
 ## Quickstart
 
-    docker compose up -d
-    python -m venv .venv
-    source .venv/bin/activate
-    pip install -r requirements.txt
+You can bootstrap the entire environment with the included setup script by running:
 
-Uses a **single-node replica set** so transactions & change streams work locally.
+```
+. ./setup.sh
+```
+
+This will:
+- start the MongoDB single-node replica set via Docker
+- create a Python virtual environment
+- install dependencies
+
+Note: This setup uses a **single-node replica set** so transactions & change streams work locally.
 
 ## Labs
 
